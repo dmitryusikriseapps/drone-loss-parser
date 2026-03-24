@@ -21,7 +21,7 @@ jobs:
         run: pip install poetry
 
       - name: Install dependencies
-        run: poetry install --with dev
+        run: poetry install --with dev --no-root
 
       - name: Build EXE
         run: poetry run pyinstaller --onefile --console --name parse_drone_losses parse_drone_losses.py
